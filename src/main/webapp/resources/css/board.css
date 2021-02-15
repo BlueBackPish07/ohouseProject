@@ -1,1 +1,41 @@
 @charset "UTF-8";
+
+
+.wrap{
+  
+  }
+
+.production_selling_overview{ 
+  
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    box-sizing: border-box;
+    -webkit-box-flex: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+  
+  }
+
+
+
+.brand {
+    color: #35c5f0;
+    font-weight: 700;
+    transition: opacity .1s;
+    isplay: block;
+    margin: 19px 0 2px
+    /*line-height: 19px;
+    font-size: 13px;*/
+}
+
+.product_nm{
+    display: block;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #000;
+    overflow-wrap: break-all;
+    margin-right: 36px;
+  }
+
