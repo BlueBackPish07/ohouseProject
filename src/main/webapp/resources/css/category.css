@@ -1,41 +1,24 @@
-@charset "UTF-8";
-
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
 
 li {
     list-style: none;
 }
 
 
-.category-container {
+.category-container { /* 그리드구조 */
     display: grid;
     grid-template-columns: 289px 847px;
-    grid-template-areas: 'category-side-bar category-header category-header'
-                         'category-side-bar category-content category-content'
-                         'category-side-bar category-content category-content';
+    grid-template-areas: 'category-side-bar category-header'
+                         'category-side-bar category-content';
     position: absolute;
     top: 175px;
     left: 50%;
     margin-left: -568px;
-}
-.category-container div{
-    padding: 0px;
-}
-
-.category-header{
-    grid-area: category-header;
-    background-color: aqua;
-  
     
 }
 
-.category-banners{
-    background-color: rgb(0, 255, 13);
-    margin-top: 20px;
-    width: 847px;
-    height: 250px;
-}
-
-.category-side-bar {
+ /* ---------------사이드 메뉴시작--------------- */
+.category-side-bar {   
     grid-area: category-side-bar;
     
 }
@@ -49,21 +32,17 @@ li {
     margin: 0 0 27px;
     font-size: 20px;
     font-weight: 700;
-    color: black;
+    color: #000;
     margin-bottom: 27px;
     padding: 0;
 
-}
-
-.category-side-bar .category-side-bar-title a {
-	color: #000;	
 }
 
 .category-side-bar .category-side-bar-list {
     margin: 0 0 27px;
     font-size: 14px;
     font-weight: 700;
-    color: black;
+    color: #000;
     margin: 0;
     padding: 0;
     
@@ -91,16 +70,193 @@ li {
 
 }
 .category-side-bar-other a {
-    color: black;
+    color: #000;
 }
 
-.category-side-bar-other li {
+.category-side-bar-other li {   
     margin-top: 15px;
 }
+/* ---------------사이드 메뉴끝--------------- */
 
 
-.category-content{
+.category-content {  /* 컨텐츠 시작*/
     grid-area: category-content;
-    background-color: rgb(251, 255, 0);
-    height: 1500px;
+    height: 2000px;
 }
+
+/* 현재메뉴이름, 배너 시작*/
+.category-header {  
+    grid-area: category-header;
+    height: 318px;
+}
+
+.category-header-title {
+    height: 34px;
+    font-size: 15px;
+    color: #000;
+
+}
+
+.category-banners{ 
+    background-color: rgb(0, 255, 13);
+    width: 847px;
+    height: 250px;
+}
+ /* 현재메뉴이름, 배너 끝 */
+
+/* ------------상품 리스트 시작-------------*/
+
+.category-mdpick {
+    height: 351px;
+}
+
+.category-mdpick-title {    
+    font-size: 16px;
+    font-weight: 700;
+    height: 17px;
+    margin: 0 0 20px;
+    color: #424242;
+}
+.category-itembox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.category-mdpick-item {  /* 작은박스 */
+    padding-bottom: 30px;
+    width: 152px;
+    height: 284px;
+    color: #000;
+}
+
+.category-mdpick-item:hover .category-item-s-img-pp {
+    transform:scale(1.1); /* 마우스 오버시 이미지 크기를 1.1 배만큼 확대시킨다. */
+    -o-transform:scale(1.1); 
+    -moz-transform:scale(1.1);
+    -webkit-transform:scale(1.1);
+
+    transition: transform .20s;  /* 0.20초에 걸쳐서 확대됨*/
+    -o-transition: transform .20s;
+    -moz-transition: transform .20s;
+    -webkit-transition: transform .20s;
+}
+
+.category-mdpick-item:hover .category-item-name {
+    color: rgb(155, 155, 155);
+}
+
+
+.category-item-s-img {
+    margin-bottom: 8px;
+    width: 152px;
+    height: 152px;
+    border-radius: 2%;
+    overflow:hidden;
+}
+
+.category-item-s-img-pp {
+    width: 152px;
+    height: 152px;
+    
+}
+
+.category-item-list a {
+    display: block;
+    float: left;
+}
+
+.category-item-list a:nth-child(3n+2) {
+    padding: 0 20px;
+  }
+
+.category-all-item { /* 큰박스 */
+    display: block;
+    width: 269px;
+    height: 431px;
+    color: #000;
+    padding: 0 0px;
+}
+
+
+
+.category-all-item:hover .category-item-l-img-pp {
+    transform:scale(1.1); /* 마우스 오버시 이미지 크기를 1.1 배만큼 확대시킨다. */
+    -o-transform:scale(1.1); 
+    -moz-transform:scale(1.1);
+    -webkit-transform:scale(1.1);
+
+    transition: transform .20s;  /* 0.20초에 걸쳐서 확대됨*/
+    -o-transition: transform .20s;
+    -moz-transition: transform .20s;
+    -webkit-transition: transform .20s;
+}
+
+.category-all-item:hover .category-item-name {
+    color: rgb(155, 155, 155);
+}
+
+
+.category-item-l-img {
+    margin-bottom: 8px;
+    width: 269px;
+    height: 269px;
+    border-radius: 2%;
+    overflow:hidden;
+}
+
+.category-item-l-img-pp {
+    width: 269px;
+    height: 269px;
+    
+}
+
+.category-item-info { 
+    width: 152px;
+    height: 123px;
+}
+
+.category-item-brand {
+    font-size: 11px;
+}
+
+.category-item-name {
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 17px;
+}
+.category-item-pricebox {
+    display: flex;
+    font-size: 17px;
+    line-height: 23px;
+    font-weight: 700;
+}
+
+.category-item-pricebox-sale {
+    margin-right: 5px;
+    color: #35c5f0;
+}
+
+.category-item-pricebox-price {
+    color: #000;
+}
+
+.category-item-avg {
+    margin: 2px;
+    font-size: 14px;
+    color: #000;
+    font-weight: 700;
+}
+
+.category-item-avg .fa-star {
+    margin-right: 3px;
+    color: #35c5f0;
+}
+
+.category-item-rev { 
+    font-size: 12px;
+    color: rgb(155, 155, 155);
+    font-weight: 700;
+
+}
+/* ------------상품리스트 끝-------------*/
