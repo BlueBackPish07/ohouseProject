@@ -1,11 +1,10 @@
 @charset "UTF-8";
-
-div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+ul{
+  margin: 0px;
+}
 
 /*베이스*/
-li {
-    list-style: none;
-}
+
 
 html, body {
 	
@@ -15,54 +14,80 @@ html, body {
     letter-spacing: -0.4px;
     font-size: 13px;
 }
+.top_contaner{
+    height: 40px;
+}
 
-.category-container { 
-    display: flex;
-    position: absolute;
-    top: 50px;
-    left: 60%;
-    margin-left: -520px;
+.main_container { 
     
 }
 
-/* 상품 이미지 css */
+.first_container{
+    display: flex;
+    top: 80px;
+    /*background-color : grey;*/
+}
+
+.second_contaner{
+    display : inline;
+    /* background-color : grey;*/
+  }
+
+/* 상품 이미지 */
 
 .product_img {
-   padding : 10px 10px 10px 10px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    width: 400px;
+    display : flex;
+    width: 60%;
+    padding : 30px;
+}
+.pro_min_img_box{
+  width: 20%;
+  position: flex;
+}
+.pro_big_img{
+  max-width: 100%; 
+  height: auto;
+
+}
+.pro_big_img_box{
+  position: flex;
+  padding: 5 20 0px;
+  width : 100%;
 }
 
-.pro_big_img{
-	  width: 100%;
-    height: 100%;
-}
 .pro_min_img{
-    flex-direction :row-reverse;
-   flex-wrap: wrap;
-	 width: 100px;
-    height: 100px;
+   margin : 5px;
+   max-width: 100%; 
+   height: auto;
+   border-radius: 5px;
+  
 }
+
+.pro_min_img:hover {
+   border: 3px solid #35c5f0;
+}
+
+/*제품 판매 관련 박스*/
 
 .production_selling { 
   
     position: flex;
-    width: 100%;
-    box-sizing: border-box;
+    width: 150px;
   
   }
-/*제품관련 */
+
 
 .brand {
     color: #35c5f0;
     font-weight: 700;
     transition: opacity .1s;
-    isplay: block;
-    margin: 19px 0 2px;
-    line-height: 19px;
-    font-size: 13px;
+    display: block;
+    margin: 19px 0 2px
+ 
+}
+
+.brand:hover {
+   opacity: 0.3;
 }
 
 .product_nm{
@@ -80,6 +105,10 @@ html, body {
 	font-weight: 700;
   color: #35c5f0;
 }
+.review_content:hover {
+  opacity: 0.3;
+}
+
 
 .sale_box{
    display: flex;
@@ -99,20 +128,23 @@ html, body {
 .sale_price{
    padding-left :20px;
    color: #000; 
-   font-bottom : 10px;
+
+}
+.sale_price >ul{
+  padding: 10px;
 }
 
-.production_url_share{
-    position: absolute;
-    top: 22px;
-    right: 0;
+.share_button{
+    position: relative; 
+    top: 50px;
+    left: 30%;
     margin: 0 -6px;
   }
  
-.share_button {
-    position: absolute;
-    top: 22px;
-    right: 30px;
+.scrap_button {
+    position: relative;
+    top: 50px;
+    left: 15%;
     margin: 0 -6px;
 }
 
@@ -126,7 +158,6 @@ html, body {
 
 .card_content{
    width: 100% ;
-   height: 100%;
    padding-bottom: 10px;
    border-bottom: 1px solid grey;
    font-weight: 600;
@@ -146,7 +177,11 @@ html, body {
   color: #35c5f0;
 }
 
-/*선택 액션*/
+.brand_home:hover {
+   opacity: 0.3;
+}
+
+/* 상품 선택 액션*/
 .select {
   position: relative;
   display: inline-block;
@@ -185,15 +220,19 @@ html, body {
 
 .order_or_basket{
    display: flex;
-   height: 100px;
+   height: 80px;
    margin-top: 30px;
 }
+.order_or_basket *:hover{
+  opacity: 0.3
+}
+
 .basket_box{
-  font-size: 25px;
+  font-size: 20px;
    width: 50%;
-   margin: 10px;
+   margin: 10px 0px 10px 10px;
+   padding : 20px;
    color: #35c5f0;
-   line-height: 80px;
    text-align: center;
    background: #0000;
    border-radius: 10px;
@@ -201,14 +240,282 @@ html, body {
 }
 
 .order_box{
-  font-size: 25px;
-   width:  50%;
-   margin: 10px;
+   font-size: 20px;
+   width: 50%;
+   margin: 10px 0px 10px 10px;
+   padding : 20px;
    color: #fff;
-   line-height: 80px;
    text-align: center;
    background: #35c5f0;
    border-radius: 10px;
    float: right;
+}
+.banner{
+  align-items: center;
+  width: 90%;
+  margin: 10px 0px 10px 0px;
+  padding : 20px;
+  background: #66a594;
+}
+
+
+.tab_nav{
+  width: 100%;
+  height: 50px;
+  border-top: #555 solid 1px;
+  border-bottom: #555 solid 1px;
+}
+
+.tab_nav_item{
+  margin: 11px ;
+  padding-right : 7%;
+  padding-inline-start: 30px;
+  font-size : 1.3em;
+  display : inline;
+  height: 10px;
+  line-height: 50px;
+}
+
+.page_1 {
+  width: 100%;
+ 
+}
+
+.page_2 {
+  width: 100%;
+}
+.page_3 {
+ 
+  width: 100%;
+
+}
+.page_4 {
+  width: 100%;
+}
+
+.nav_item_text{
+  font-size: 20px;
+	font-weight: 700;
+  margin: 20px;
+}
+
+.detail_content_wrap{
+  width: 900px;
+  border: 1px solid red; 
+  padding: 30px;
+}
+
+.product_info{
+  font-size: small;
+}
+
+/*리뷰 시작*/
+.write_review{
+  font-size: 15px;
+	font-weight: 700;
+  color: #35c5f0;
+  padding-left: 80%;
+}
+.review_point_box{
+  display: flex;
+  width: 100%;
+  background-color: #C9C9C9;
+  border-radius: 3%;
+}
+
+
+/*별점 시작*/
+.star_box{
+  width: 50%;
+}
+.wrap-star{
+  padding: 65px;
+}
+.star-rating {
+    width: 304px;
+}
+.star-rating,
+.star-rating span {
+    display: inline-block;
+    height: 55px;
+    overflow: hidden;
+    background: url(img/star.png)no-repeat;
+}
+.star-rating span {
+    background-position: left bottom;
+    line-height: 0;
+    vertical-align: top;
+}
+/* 별점 그래프 시작*/
+
+.review_graph{
+  padding-left: 30px;
+  width: 40%;
+  
+}
+.h_graph ul {
+    margin: 0 50px;
+    padding: 10px 0 0;
+    border-top: 0;
+    border-right: 0;
+    font-size: 11px;
+    font-family: Tahoma, Geneva, sans-serif;
+    list-style: none;
+
+}
+.h_graph li {
+    position: relative;
+    margin: 10px 0;
+    vertical-align: top;
+    white-space: nowrap;
+    background-color: rgb(202, 192, 192);
+}
+.h_graph .g_term {
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 40px;
+    font-weight: bold;
+    color: #767676;
+    line-height: 20px;
+    text-align: right;
+}
+.h_graph .g_bar {
+    display: inline-block;
+    height: 20px;
+    border-left: 0;
+   background: #35c5f0;
+}
+.h_graph .g_bar span {
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 40px;
+    color: #767676;
+    line-height: 20px;
+}
+
+/*리뷰 게시판 정렬*/
+
+.review_sort{
+  padding: 15px;
+}
+.review_sort_item{
+  display: flex;
+  font-size: 15px;
+  font-weight: bold;
+}
+.review_sort_item p{
+  padding: 0 30 0 0;
+  color: #555;
+}
+
+/*리뷰게시판 상세 내용*/
+
+.thumbnail_box{
+  width: 50px;
+    height: 50px; 
+    border-radius: 70%;
+    overflow: hidden;
+}
+.thumbnail{
+  width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.review_head{
+  padding: 10 0 10 0;
+  display: flex;
+}
+.review_detail{
+  
+}
+
+.review_img{
+  width: 100px;
+  height: 100px; 
+  border-radius: 10%;
+}
+.review_article{
+  padding: 20 0 20 0;
+}
+
+.review_favorite{
+  width: 100px;
+    font-size: 1.2rem;
+    margin: 10px 0px 10px 5px;
+    padding: 10px;
+    color: #35c5f0;
+    text-align: center;
+    background: #0000;
+    border-radius: 10px;
+    border: 2px solid #35c5f0;
+}
+
+.question_detail
+{ 
+  display: flex;
+  font-size: 13px;
+  color: #767676;
+}
+.question_detail >div{
+  padding: 0 10 5 0;
+}
+.question_wrap{
+  display: flex;
+  padding: 5 0 30 0;
+}
+
+.Q_A_icon{
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #35c5f0;
+  padding: 0 5 0 0;  
+}
+.Q_A_text{
+  font-size: 1.2rem;
+}
+.answer_wrap{
+  display: flex;
+  padding: 5 0 30 0;
+}
+
+.selling_table{
+  width: 100%;
+  font-size: 12px;
+  margin-top: 28px;
+  margin-bottom: 38px;
+}
+
+.selling_table tr{
+  border : 1px solid gray;  
+}
+.selling_table th{
+  width: 30%;
+  padding: 12 6 0 0;
+  text-align: left;
+  line-height: 1.38; 
+  color: #757575; 
+}
+.selling_table td{
+  padding: 12 6 0 0;
+  text-align: left;
+  line-height: 1.38;
+}
+
+.refund_note{
+  padding-left: 10px;
+}
+.refund_title{
+  padding-left:10px;
+}
+.refund_title > li{
+  position: relative;
+  padding-left: 14px;
+}
+
+.refund_text > li::marker{
+  font-weight: 700;
 }
 
